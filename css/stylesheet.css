@@ -1,0 +1,85 @@
+/*CSS Stylesheet*/
+
+/** {border: 1px solid black;}*/
+
+body {
+/*  width: auto;*/
+    background:black;
+/*    background-image: url(flame.png);*/
+/*    background-size: 503px;*/
+/*    background-repeat: no-repeat;*/
+        
+/*    text-align:center;*/
+/*
+    margin-left: 0px;
+    padding-left: 0px;
+*/
+    align-content: center;
+    max-width: 1000px;
+/*    height: 600px;*/
+/*    border: 4px solid white;*/
+    margin: auto;
+    
+}
+
+#wrapper {
+    width: 960px;
+    min-height: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+img {
+ max-height: 500px;
+    position: absolute;
+    top: 5%;
+    right: 240px;
+/*    text-align: center;*/
+/*    align-self: center;*/
+/*    margin: auto;*/
+/*    align-items: center;*/
+/*    margin-left: 0px;*/
+/*    padding-left: 0px;*/
+    margin: auto;
+    
+}
+
+#flame1 {
+    
+    animation: 
+		flicker1 5s infinite,
+        shake 5s infinite;
+    
+}
+
+#flame2 {
+    
+    animation: 
+		flicker2 10s infinite,
+        shake 7s infinite;
+    
+}
+
+@keyframes flicker1 {
+  0%  {opacity:0.5;}
+15%  {opacity:0.8;}
+    30%  {opacity:1.0;}
+    40%  {opacity:0.7;}
+    50% {opacity:0.5;}
+  100%	{opacity:0.3;}
+}
+
+@keyframes flicker2 {
+  100%  {opacity:0.4;}
+40%  {opacity:0.9;}
+    30%  {opacity:0;}
+    15%  {opacity:0.4;}
+  0%	{opacity:0.2;}
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
